@@ -9,7 +9,7 @@ import androidx.test.espresso.matcher.ViewMatchers
 import androidx.test.espresso.matcher.ViewMatchers.*
 import com.example.espressotest.R
 
-class LoginScreen {
+class LoginScreen: ScreenObjectHelpers() {
 
     private val loginEditText = onView(withId(R.id.username))
     private val passwordEditText = onView(withId(R.id.password))
@@ -28,14 +28,11 @@ class LoginScreen {
 
     fun typePassword(password: String) {
         passwordEditText.perform(typeText((password)))
+        closeSoftwareKeyboard()
     }
 
     fun clickLoginButton() {
         loginButton.perform(click())
-    }
-
-    fun closeSoftwareKeyboard() {
-        onView(ViewMatchers.isRoot()).perform(ViewActions.closeSoftKeyboard())
     }
 
 //    fun passwordErrorMessageIsDisplaying() {
