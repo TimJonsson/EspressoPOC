@@ -1,4 +1,4 @@
-package com.example.espressotest.ScreenObjects
+package com.example.espressotest.screenObjects.screenObjectHelpers
 
 import androidx.test.espresso.Espresso
 import androidx.test.espresso.action.ViewActions
