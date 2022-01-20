@@ -14,7 +14,7 @@ class LoginScreen {
     private val loginEditText = onView(withId(R.id.username))
     private val passwordEditText = onView(withId(R.id.password))
     private val loginButton = onView(withId(R.id.login))
-    private val passwordErrorMessage = onView(withText("Password must be >5 characters"))
+//    private val passwordErrorMessage = onView(withId(R.id.invalid_password))
 
     fun isDisplaying() {
         loginEditText.check(matches(isDisplayed()))
@@ -38,7 +38,7 @@ class LoginScreen {
         onView(ViewMatchers.isRoot()).perform(ViewActions.closeSoftKeyboard())
     }
 
-    fun passwordErrorMessageIsDisplaying() {
-        passwordErrorMessage.check(matches(isDisplayed()))
-    }
+//    fun passwordErrorMessageIsDisplaying() {
+//        passwordErrorMessage.check(matches(isDisplayed()))
+//    }
 }
